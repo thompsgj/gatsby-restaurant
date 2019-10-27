@@ -1,23 +1,18 @@
 import React from "react"
-import { FaBeer } from "react-icons/fa"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import styled from "styled-components"
+import { HomeHeader, Banner, BannerButton } from "../utils"
+import img from "../images/bcg/homeBcg.jpeg"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h3>Hello from Gatsby</h3>
-    <p>
-      Let's go for a <FaBeer />
-    </p>
-    <ButtonWrapper>Click Me</ButtonWrapper>
+    <HomeHeader img={img}>
+      <Banner title="eatery" subtitle="55 main street - Santa Monica, CA">
+        <BannerButton style={{ margin: "2rem auto" }}>menu</BannerButton>
+      </Banner>
+    </HomeHeader>
   </Layout>
 )
-
-const ButtonWrapper = styled.button`
-  background: blue;
-  color: white;
-`
 
 export default IndexPage
